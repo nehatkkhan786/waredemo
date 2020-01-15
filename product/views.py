@@ -6,7 +6,7 @@ from . models import Product
 def add_product(request):
 	if request.method == 'POST':
 		name = request.POST.get('name')
-		price = models.POST.get('price')
+		price = request.POST.get('price')
 		product = Product.objects.create(name = name, price = price, quantity=0, user = request.user)
 		product.save()
 		return redirect('pages:dashboard')

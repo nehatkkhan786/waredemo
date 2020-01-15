@@ -20,3 +20,34 @@ def login(request):
 		else:
 			return redirect('pages:login')
 	return render(request, 'login.html', )
+
+def logout(request):
+	auth.logout(request)
+	return redirect('pages:login')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
